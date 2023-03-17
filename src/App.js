@@ -2,6 +2,7 @@ import "./App.css";
 import Employee from "./components/Employee";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Testimonial from "./components/Tesimonials"
 
 function App() {
   const [role, setRole] = useState();
@@ -66,8 +67,14 @@ function App() {
       ) : (
         <p>You cannot see the employees</p>
       )}
+
+      <div>
+        <Testimonial></Testimonial>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+

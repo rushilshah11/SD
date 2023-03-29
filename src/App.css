@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --grey-light: #DDDDDA;
+    --grey-mid: #C2C8C5;
+    --blue-light: #94B0B7;
+    --blue-mid: #7697A0;
+    --blue-dark: #4A707A;
+    
+}
+
+.background-Nav-Footer{
+    background-color: white;
+}
+
+.text-color{
+    color: black;
+}
+
+text-color:hover{
+    color: var(--blue-dark);
+}

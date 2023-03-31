@@ -37,7 +37,7 @@ function ModalTest(props) {
               controlId="exampleForm.ControlSubject1"
             >
               <Form.Label>Subject</Form.Label>
-              <Form.Control type="subject"/>
+              <Form.Control type="subject" />
             </Form.Group>
             <Form.Group
               className="mb-3"
@@ -60,5 +60,5 @@ function ModalTest(props) {
     </>
   );
 }
-   
+
 export default ModalTest;

@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 // import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import App from "../App.css"
 
 function Navigation(props) {
   const navArr = [
@@ -48,7 +47,7 @@ function Navigation(props) {
               );
             })}
           </Nav>
-          <Button variant="outline-success">Schedule an Appointment</Button>
+          <Button variant="outline-success">Contact Us</Button>
         </Navbar.Collapse>
       </Container>
       {props.children}

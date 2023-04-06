@@ -1,15 +1,13 @@
 import "./App.css";
-import Employees from "./components/Employees";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import Testimonial from "./components/Testimonials"
+import BookAppointment from "./components/BookAppointment";
 
 
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
-      <Employees></Employees>
+      <BookAppointment></BookAppointment>
       <Testimonial></Testimonial>
       <Footer></Footer>
     </div>

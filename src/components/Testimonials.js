@@ -1,5 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import "./Testimonals.css";
 import "../App.css";
 
@@ -22,30 +25,100 @@ function Testimonials() {
   ];
 
   return (
-    <Carousel variant="dark" className="car-pos">
-      {testimonials.map((testimonial) => {
-        return (
-          <Carousel.Item interval={5000}>
-            <div className="container d-flex justify-content-center">
-              <div className="row">
-                <div className="col-12">
-                  <Card className="border border-white m-5" bg="info">
-                    <Card.Body className="mx.auto">
-                      <Card.Text className="text-center">
-                        {testimonial.description}
-                      </Card.Text>
-                      <Card.Title class="text-center">
-                        {testimonial.name}
-                      </Card.Title>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
-        );
-      })}
-    </Carousel>
+    <Container>
+      <Row>
+        <Col>
+          <Carousel
+            pause="hover"
+            controls="false"
+            variant="dark"
+            className="car-pos col-sm"
+          >
+            {testimonials.map((testimonial) => {
+              return (
+                <Carousel.Item pause="hover" controls="false" interval={2000}>
+                  <div className="container d-flex justify-content-center">
+                    <div className="row">
+                      <div className="col-12">
+                        <Card className="border border-white m-3">
+                          <Card.Body className="mx.auto">
+                            <Card.Text className="text-center">
+                              {testimonial.description}
+                            </Card.Text>
+                            <Card.Title class="text-center">
+                              {testimonial.name}
+                            </Card.Title>
+                          </Card.Body>
+                        </Card>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </Col>
+
+        <Col>
+          <Carousel
+            pause="hover"
+            controls="false"
+            variant="dark"
+            className="car-pos col-sm"
+          >
+            {testimonials.map((testimonial) => {
+              return (
+                <Carousel.Item pause="hover" controls="false" interval={2000}>
+                  <div className="container d-flex justify-content-center">
+                    <div className="row">
+                      <div className="col-12">
+                        <Card className="border border-white m-3">
+                          <Card.Body className="mx.auto">
+                            <Card.Text className="text-center">
+                              {testimonial.description}
+                            </Card.Text>
+                            <Card.Title class="text-center">
+                              {testimonial.name}
+                            </Card.Title>
+                          </Card.Body>
+                        </Card>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </Col>
+
+        <Col>
+          <Carousel pause='hover' controls="false" variant="dark" className="car-pos col-sm">
+            {testimonials.map((testimonial) => {
+              return (
+                <Carousel.Item pause='hover' controls="false" interval={2000}>
+                  <div className="container d-flex justify-content-center">
+                    <div className="row">
+                      <div className="col-12">
+                        <Card className="border border-white m-3">
+                          <Card.Body className="mx.auto">
+                            <Card.Text className="text-center">
+                              {testimonial.description}
+                            </Card.Text>
+                            <Card.Title class="text-center">
+                              {testimonial.name}
+                            </Card.Title>
+                          </Card.Body>
+                        </Card>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

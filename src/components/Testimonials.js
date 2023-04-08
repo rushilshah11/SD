@@ -16,7 +16,7 @@ function Testimonials() {
     {
       name: "Debbie Thompson",
       description:
-        "“Everyone is so friendly and gentle. They explain what they are doing and what the plans are for the next move. I do highly recommend Sunkist Dental and Dr. Shah. My experience with them has been good”",
+        "“Everyone is so friendly and gentle. They explain what they are doing and what the plans are for the next move. I do highly recommend Sunkist Dental and Dr. Shah. My experience has been good”",
     },
     {
       name: "Daniel P",

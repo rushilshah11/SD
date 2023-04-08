@@ -11,16 +11,12 @@ function ModalTest(props) {
 
   return (
     <>
-      <button
-        onClick={handleShow}
-        className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
-      >
-        Contact
-      </button>
+     
+      <Button onClick={handleShow} variant="outline-success">Book Appointment</Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Contact {props.name} </Modal.Title>
+          <Modal.Title>Book Appointment</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -53,7 +49,7 @@ function ModalTest(props) {
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Send to {props.name}
+            Send to
           </Button>
         </Modal.Footer>
       </Modal>

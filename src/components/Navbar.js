@@ -1,6 +1,6 @@
-import Button from "react-bootstrap/Button";
+
 import Container from "react-bootstrap/Container";
-// import Form from "react-bootstrap/Form";
+import ModalTest from "./modalTest.js"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
@@ -47,7 +47,7 @@ function Navigation(props) {
               );
             })}
           </Nav>
-          <Button variant="outline-success">Contact Us</Button>
+          <ModalTest></ModalTest>
         </Navbar.Collapse>
       </Container>
       {props.children}

@@ -1,7 +1,7 @@
 import "../App.css";
 import "./BookAppointment.css";
-import Button from "react-bootstrap/Button";
 import Navbar from "./Navbar";
+import ModalTest from "./modalTest";
 
 function BookAppointment() {
   return (
@@ -20,8 +20,9 @@ function BookAppointment() {
               you in your journey to your best smile.
             </p>
             <br></br>
-            <a href="/appointment">
-              <Button variant="outline-success">Book Appointment</Button>
+            <a>
+              
+              <ModalTest></ModalTest>
             </a>
           </div>
         </div>

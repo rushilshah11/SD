@@ -1,0 +1,31 @@
+.services {padding: 80px 0 80px 0;position: relative;}
+
+.services-style {
+	height: auto;
+	float: left;
+	margin-bottom: 40px;
+}
+.services-style h4 {
+	font-family: 'Conv_Superior Title - Bold';
+	color: #266880;
+	font-size: 35px;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+.services-style p{
+	font-size: 16px;
+	color: #666666;
+}
+.services-btn{
+	text-align: center;
+	padding: 20px 0 10px 0;
+}
+.btn.btn-primary {
+	padding: 15px 35px;
+	font-family:'Gotham-medium';
+	border-radius: 0;
+	background: #266880;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:12px;
+}

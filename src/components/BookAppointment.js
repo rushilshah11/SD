@@ -3,6 +3,7 @@ import "./BookAppointment.css";
 import Navbar from "./Navbar";
 import ModalTest from "./modalTest";
 
+
 function BookAppointment() {
   return (
     <div className="doctorHeading">
@@ -20,10 +21,7 @@ function BookAppointment() {
               you in your journey to your best smile.
             </p>
             <br></br>
-            <a>
-              
-              <ModalTest></ModalTest>
-            </a>
+            <ModalTest></ModalTest>
           </div>
         </div>
         <div class="col-md-7">

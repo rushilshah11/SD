@@ -7,12 +7,14 @@ import Testimonial from "./components/Testimonials"
 import BookAppointment from "./components/BookAppointment";
 import MeetTheDoctor from "./components/MeetTheDoctor";
 import ContactForm from "./components/contactForm";
+import SubNav from "./components/SubNav";
 
 
 function App() {
   return (
     <div>
       <BookAppointment></BookAppointment>
+      <SubNav></SubNav>
       <Testimonial></Testimonial>
       <Container>
         <Row>

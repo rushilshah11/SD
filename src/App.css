@@ -11,6 +11,18 @@
     
 }
 
+h4 {
+	font-family: 'Conv_Superior Title - Bold';
+	color: #266880;
+	font-size: 35px;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+p{
+	font-size: 16px;
+	color: #666666;
+}
+
 
 .background-Nav-Footer{
     background-color: white;

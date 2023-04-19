@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import "./services.css";
 
 function ServicesPage(props) {

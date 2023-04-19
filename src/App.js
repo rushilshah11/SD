@@ -18,10 +18,10 @@ function App() {
       <Testimonial></Testimonial>
       <Container>
         <Row>
-          <Col sm={8}>
+          <Col sm={7}>
             <ContactForm></ContactForm>
           </Col>
-          <Col sm={4}>
+          <Col sm={5}>
             <MeetTheDoctor></MeetTheDoctor>
           </Col>
         </Row>

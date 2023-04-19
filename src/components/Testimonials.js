@@ -24,15 +24,51 @@ function Testimonials() {
     },
   ];
 
+ 
+
   return (
     <Container>
+      <h1 className="bg-yellow-200 p-20 m-7 flex justify-center">hello</h1>
       <Row>
         <Col>
           <Carousel
             pause="hover"
-            controls="false"
+            controls={false}
             variant="dark"
-            className="car-pos col-sm"
+            className="hvr-float car-pos col-sm"
+            indicators={false}
+          >
+            {testimonials.map((testimonial) => {
+              return (
+                <Carousel.Item pause="hover" controls="false" interval={2000}>
+                  <div className="hvr-fade container d-flex justify-content-center">
+                    <div className="row">
+                      <div className="col-12">
+                        <Card className="hvr-fade border-white m-3">
+                          <Card.Body className="mx.auto">
+                            <Card.Text className="text-center">
+                              {testimonial.description}
+                            </Card.Text>
+                            <Card.Title class="text-center">
+                              {testimonial.name}
+                            </Card.Title>
+                          </Card.Body>
+                        </Card>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </Col>
+
+        <Col>
+          <Carousel
+            pause="hover"
+            controls={false}
+            variant="dark"
+            className="hvr-float car-pos col-sm"
           >
             {testimonials.map((testimonial) => {
               return (
@@ -62,40 +98,13 @@ function Testimonials() {
         <Col>
           <Carousel
             pause="hover"
-            controls="false"
+            controls={false}
             variant="dark"
-            className="car-pos col-sm"
+            className="hvr-float car-pos col-sm"
           >
             {testimonials.map((testimonial) => {
               return (
                 <Carousel.Item pause="hover" controls="false" interval={2000}>
-                  <div className="container d-flex justify-content-center">
-                    <div className="row">
-                      <div className="col-12">
-                        <Card className="border border-white m-3">
-                          <Card.Body className="mx.auto">
-                            <Card.Text className="text-center">
-                              {testimonial.description}
-                            </Card.Text>
-                            <Card.Title class="text-center">
-                              {testimonial.name}
-                            </Card.Title>
-                          </Card.Body>
-                        </Card>
-                      </div>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              );
-            })}
-          </Carousel>
-        </Col>
-
-        <Col>
-          <Carousel pause='hover' controls="false" variant="dark" className="car-pos col-sm">
-            {testimonials.map((testimonial) => {
-              return (
-                <Carousel.Item pause='hover' controls="false" interval={2000}>
                   <div className="container d-flex justify-content-center">
                     <div className="row">
                       <div className="col-12">

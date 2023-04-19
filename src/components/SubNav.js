@@ -3,7 +3,7 @@ import "../App.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ModalTest from "./modalTest.js";
+import ServicesModal from "./services.js";
 import { TbDental } from "react-icons/tb";
 import {GiToothbrush} from "react-icons/gi"
 import { RiParentFill } from "react-icons/ri";
@@ -70,7 +70,7 @@ function subNav() {
         </Container>
       </section>
       <div className="container d-flex justify-content-center">
-        <ModalTest></ModalTest>
+        <ServicesModal></ServicesModal>
       </div>
     </div>
   );

@@ -158,24 +158,23 @@ function ServicesPage(props) {
         </Modal.Header>
         <Modal.Body>
           <div className="flex flex-wrap justify-center grid grid-cols-2 grid-flow-row">
-              {services.map((service) => {
-                return (
-                  <Card>
-                    <Card.Body className="text-center">
-                      <Card.Title>
-                        <a
-                          href= {service.link}
-                          className="no-underline text-color"
-                        >
-                          <p className="hover:text-sky-700">{service.title}</p>
-                        </a>
-                      </Card.Title>
-                    </Card.Body>
-                  </Card>
-                );
-              })}
-            </div>
-    
+            {services.map((service) => {
+              return (
+                <Card>
+                  <Card.Body className="text-center">
+                    <Card.Title>
+                      <a
+                        href={service.link}
+                        className="no-underline text-color"
+                      >
+                        <p className="hover:text-sky-700">{service.title}</p>
+                      </a>
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

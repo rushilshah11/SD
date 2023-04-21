@@ -1,4 +1,3 @@
-
 import Container from "react-bootstrap/Container";
 import ModalTest from "./modalTest.js"
 import Nav from "react-bootstrap/Nav";
@@ -11,16 +10,16 @@ function Navigation(props) {
       link: "/services",
     },
     {
+      title: "Reviews",
+      link: "/Reviews",
+    },
+    {
+      title: "Smile Gallery",
+      link: "/Smile Gallery",
+    },
+    {
       title: "Meet the Doctor",
       link: "/meet_the_doctor",
-    },
-    {
-      title: "Testimonials",
-      link: "/testimonials",
-    },
-    {
-      title: "Hours",
-      link: "/hours",
     },
     {
       title: "Contact Us",
@@ -42,7 +41,6 @@ function Navigation(props) {
               return (
                 <Nav.Link className="link-dark" href={nav_i.link}>
                   {nav_i.title}
-                  {/* <p className="hover:text-sky-700">{nav_i.title}</p> */}
                 </Nav.Link>
               );
             })}

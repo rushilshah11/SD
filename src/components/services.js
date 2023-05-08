@@ -16,137 +16,86 @@ function ServicesPage(props) {
       link: "https://en.wikipedia.org/wiki/Restorative_dentistry",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Dental_materialComposite">
-          Composite (Tooth-Colored) Dental Fillings
-        </a>
-      ),
+      title: "Composite (Tooth-Colored) Dental Fillings",
+      link: "https://en.wikipedia.org/wiki/Dental_materialComposite",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Bridge_(dentistry)">
-          Dental Bridges
-        </a>
-      ),
+      title: "Dental Bridges",
+      link: "https://en.wikipedia.org/wiki/Bridge_(dentistry)",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Dental_implant">
-          Dental Implants (Restoration)
-        </a>
-      ),
+      title: "Dental Implants (Restoration)",
+      link: "https://en.wikipedia.org/wiki/Dental_implant",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Inlays_and_onlays">
-          Dental Inlays
-        </a>
-      ),
+      title: "Dental Inlays",
+      link: "https://en.wikipedia.org/wiki/Inlays_and_onlays",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Inlays_and_onlays">
-          Dental Onlays
-        </a>
-      ),
+      title: "Dental Onlays",
+      link: "https://en.wikipedia.org/wiki/Inlays_and_onlays",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Crown_(dental_restoration)">
-          Dental Crowns
-        </a>
-      ),
+      title: "Dental Crowns",
+      link: "https://en.wikipedia.org/wiki/Crown_(dental_restoration)",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Removable_partial_denture">
-          Partial Dentures
-        </a>
-      ),
+      title: "Partial Dentures",
+      link: "https://en.wikipedia.org/wiki/Removable_partial_denture",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Dentures">
-          Dentures (Upper and Lower)
-        </a>
-      ),
+      title: "Dentures (Upper and Lower)",
+      link: "https://en.wikipedia.org/wiki/Dentures",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Dentures">Denture Repair</a>
-      ),
+      title: "Denture Repair",
+      link: "https://en.wikipedia.org/wiki/Dentures",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Periodontology">Periodontics</a>
-      ),
+      title: "Periodontics",
+      link: "https://en.wikipedia.org/wiki/Periodontology",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Scaling_and_root_planing">
-          Root Planning
-        </a>
-      ),
+      title: "Root Planning",
+      link: "https://en.wikipedia.org/wiki/Scaling_and_root_planing",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Scaling_and_root_planing">
-          Scaling
-        </a>
-      ),
+      title: "Scaling",
+      link: "https://en.wikipedia.org/wiki/Scaling_and_root_planing",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Endodontics">Endodontics</a>
-      ),
+      title: "Endodontics",
+      link: "https://en.wikipedia.org/wiki/Endodontics",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Root_canal_treatment">
-          Root Canal Therapy
-        </a>
-      ),
+      title: "Root Canal Therapy",
+      link: "https://en.wikipedia.org/wiki/Root_canal_treatment",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Root_canal_treatment">
-          Single Visit Root Canals
-        </a>
-      ),
+      title: "Single Visit Root Canals",
+      link: "https://en.wikipedia.org/wiki/Root_canal_treatment",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Endodontic_crown">
-          Molar Endodontics
-        </a>
-      ),
+      title: "Molar Endodontics",
+      link: "https://en.wikipedia.org/wiki/Endodontic_crown",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Oral_and_maxillofacial_surgery">
-          Oral Surgery
-        </a>
-      ),
+      title: "Oral Surgery",
+      link: "https://en.wikipedia.org/wiki/Oral_and_maxillofacial_surgery",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Dental_extraction">
-          Simple Tooth Extractions
-        </a>
-      ),
+      title: "Simple Tooth Extractions",
+      link: "https://en.wikipedia.org/wiki/Dental_extraction",
     },
     {
-      title: (
-        <a href="https://en.wikipedia.org/wiki/Impacted_wisdom_teeth">
-          Non-Impacted Wisdom Teeth
-        </a>
-      ),
+      title: "Non-Impacted Wisdom Teeth",
+      link: "https://en.wikipedia.org/wiki/Impacted_wisdom_teeth",
     },
   ];
 
   return (
     <>
-      <Button onClick={handleShow} variant="outline-success">
+      <Button className="buttonspacing" onClick={handleShow} variant="outline-success">
         Services
       </Button>
 

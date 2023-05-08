@@ -28,7 +28,7 @@ function Testimonials() {
 
   return (
     <Container>
-      <h1 className="bg-yellow-200 p-20 m-7 flex justify-center">reviews</h1>
+      <h1 className="titletext p-0 m-0 flex justify-center">Reviews</h1>
       <Row>
         <Col>
           <Carousel
@@ -69,6 +69,7 @@ function Testimonials() {
             controls={false}
             variant="dark"
             className="hvr-float car-pos col-sm"
+            indicators={false}
           >
             {testimonials.map((testimonial) => {
               return (
@@ -101,6 +102,7 @@ function Testimonials() {
             controls={false}
             variant="dark"
             className="hvr-float car-pos col-sm"
+            indicators={false}
           >
             {testimonials.map((testimonial) => {
               return (

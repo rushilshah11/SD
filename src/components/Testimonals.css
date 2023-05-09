@@ -2,9 +2,9 @@
 .carousel-inner {
 	background: rgb(255, 255, 255);
 	border-radius: 25px;
-	/* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); */
-	/* box-shadow: 5px 5px 3px #266880; */
-	box-shadow: white 0px 0px 0.25em, #266880 0px 0.25em 1em;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+	
 }
 
 .car-pos{

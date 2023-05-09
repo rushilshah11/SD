@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import "./services.css";
 
 function ModalTest(props) {
   const [show, setShow] = useState(false);
@@ -12,7 +13,7 @@ function ModalTest(props) {
   return (
     <>
      
-      <Button onClick={handleShow} variant="outline-success">Book Appointment</Button>
+      <button onClick={handleShow} className="button-81">Book Appointment</button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

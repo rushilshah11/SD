@@ -20,9 +20,9 @@ function subNav() {
                 className="container d-flex justify-content-center"
               />
             </Col>
-            <Col xs={8} className="grid content-center">
+            <Col xs={8} className="mr-12 grid content-center">
               <h4>Check-Up</h4>
-              <p>
+              <p className="mr-12">
                 Creating the appearance of natural beauty requires a keen eye
                 and attention to small details. Partnering with the best labs
                 and NYC’s premier master ceramist has enabled us to transform
@@ -38,9 +38,9 @@ function subNav() {
                 className="container d-flex justify-content-center"
               />
             </Col>
-            <Col xs={8} className="grid content-center">
+            <Col xs={8} className="mr-12 grid content-center">
               <h4>Family</h4>
-              <p>
+              <p className="mr-12">
                 Creating the appearance of natural beauty requires a keen eye
                 and attention to small details. Partnering with the best labs
                 and NYC’s premier master ceramist has enabled us to transform
@@ -56,9 +56,9 @@ function subNav() {
                 className="container d-flex justify-content-center"
               />
             </Col>
-            <Col xs={8} className="grid content-center">
+            <Col xs={8} className="mr-12 grid content-center">
               <h4>Hygiene</h4>
-              <p>
+              <p className="mr-12">
                 Creating the appearance of natural beauty requires a keen eye
                 and attention to small details. Partnering with the best labs
                 and NYC’s premier master ceramist has enabled us to transform

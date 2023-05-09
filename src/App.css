@@ -35,3 +35,9 @@ p{
 text-color:hover{
     color: var(--blue-dark);
 }
+
+.navbartext{
+   font-size: 35px;
+   padding: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

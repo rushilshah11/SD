@@ -95,9 +95,9 @@ function ServicesPage(props) {
 
   return (
     <>
-      <Button className="buttonspacing" onClick={handleShow} variant="outline-success">
-        Services
-      </Button>
+      <button className="button-81" onClick={handleShow}>
+      Services
+      </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

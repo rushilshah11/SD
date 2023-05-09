@@ -28,7 +28,7 @@ function Testimonials() {
 
   return (
     <Container>
-      <h1 className="titletext p-0 m-0 flex justify-center">Reviews</h1>
+     
       <Row>
         <Col>
           <Carousel

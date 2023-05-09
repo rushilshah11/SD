@@ -1,12 +1,12 @@
-.services {padding: 80px 0 80px 0;position: relative;}
+.services {position: relative;}
 
 .services-style {
 	height: auto;
 	float: left;
-	margin-bottom: 40px;
+	
 }
 
 .services-btn{
 	text-align: center;
-	padding: 20px 0 10px 0;
+	
 }

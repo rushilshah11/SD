@@ -12,7 +12,7 @@ import SubNav from "./components/SubNav";
 
 function App() {
   return (
-    <div>
+    <div className="space-y-8 justify-between">
       <BookAppointment></BookAppointment>
       <SubNav></SubNav>
       <Testimonial></Testimonial>

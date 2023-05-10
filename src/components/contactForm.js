@@ -12,7 +12,7 @@ function ContactForm() {
                 We promise to never compromise quality for<br></br> time and
                 give my clients realistic schedules <br></br>that accommodate
                 their lives. I strive for<br></br> honest customer service and
-                work with<br></br> the best materials available.
+                work with the best materials available.
               </p>
             </div>
             <div className="flex flex-col space-y-6 text-cyan-100 text-sm">

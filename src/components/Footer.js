@@ -1,4 +1,9 @@
 import "../App.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 function Footer() {
   
@@ -9,7 +14,7 @@ function Footer() {
     "Sunday: Closed",
   ];
   return (
-    <footer className="bg-slate-200  w-full pb-10 mt-5">
+    <footer className="footerText w-full pb-10 mt-5">
       <div className="mx-auto w-full container">
         <div className="flex py-10 flex-wrap grid grid-cols-2 grid-flow-col">
           <div>
@@ -38,6 +43,19 @@ function Footer() {
           </div>
         </div>
       </div>
+      <Container className="flex justify-center mb-2">
+        <Row>
+          <Col>
+            <AiOutlineInstagram className="icon" size={30} />
+          </Col>
+          <Col>
+            <AiOutlineLinkedin className="icon" size={30} />
+          </Col>
+          <Col>
+            <AiOutlineInstagram className="icon" size={30} />
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 }

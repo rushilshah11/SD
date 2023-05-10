@@ -8,7 +8,7 @@ import BookAppointment from "./components/BookAppointment";
 import MeetTheDoctor from "./components/MeetTheDoctor";
 import ContactForm from "./components/contactForm";
 import SubNav from "./components/SubNav";
-import Socials from "./components/socials";
+
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       </Container>
 
       <Footer></Footer>
-      <Socials></Socials>
+      
     </div>
   );
 }

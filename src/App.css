@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --grey-light: #DDDDDA;
-    --grey-mid: #C2C8C5;
-    --blue-light: #94B0B7;
-    --blue-mid: #7697A0;
-    --blue-dark: #4A707A;
-    
-}
 
 h4 {
 	font-family: 'Conv_Superior Title - Bold';
@@ -24,20 +16,17 @@ p{
 }
 
 
-.background-Nav-Footer{
-    background-color: white;
-}
-
-.text-color{
-    color: black;
-}
-
-text-color:hover{
-    color: var(--blue-dark);
-}
 
 .navbartext{
    font-size: 35px;
    padding: 5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.socialsBG{
+    background-color: #266880;
+}
+
+.bgContactUs{
+    background-color: #266880;
 }

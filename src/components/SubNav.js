@@ -14,7 +14,7 @@ function subNav() {
       <section class="services">
         <Container>
           <Row className="services-style">
-            <Col style={{ color: "#3c96c0" }}>
+            <Col style={{ color: "#266880" }}>
               <TbDental
                 size={150}
                 className="container d-flex justify-content-center"
@@ -32,7 +32,7 @@ function subNav() {
             </Col>
           </Row>
           <Row className="services-style">
-            <Col style={{ color: "#3c96c0" }}>
+            <Col style={{ color: "#266880" }}>
               <RiParentFill
                 size={150}
                 className="container d-flex justify-content-center"
@@ -50,7 +50,7 @@ function subNav() {
             </Col>
           </Row>
           <Row className="services-style">
-            <Col style={{ color: "#3c96c0" }}>
+            <Col style={{ color: "#266880" }}>
               <GiToothbrush
                 size={150}
                 className="container d-flex justify-content-center"

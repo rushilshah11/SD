@@ -4,10 +4,10 @@ function ContactForm() {
   return (
     <div className="">
       <div className="flex w-ful min-h-screenitems-center">
-        <div className="flex flex-row md:space-x-6  space-y-6 md:space-y-0 bg-cyan-700 w-full max-4-4xl p-8 rounded-xl shadow-lg text-white">
+        <div className="bgContactUs flex flex-row md:space-x-6  space-y-6 md:space-y-0 w-full max-4-4xl p-8 rounded-xl shadow-lg text-white">
           <div className="flex flex-col space-y-8 justify-between">
             <div>
-              <h1 className="font-bold text-4xl tracking-wide">Contact Us</h1>
+              <h4 className="text-white text-4xl tracking-wide">Contact Us</h4>
               <p className="pt-2 text-cyan-100 text-sm">
                 We promise to never compromise quality for<br></br> time and
                 give my clients realistic schedules <br></br>that accommodate

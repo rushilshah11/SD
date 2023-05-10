@@ -1,25 +1,7 @@
 import "../App.css";
-import services from "./services.js"
 
 function Footer() {
-  const companyArr = [
-    {
-      title: "Services",
-      link: "services",
-    },
-    {
-      title: "Meet The Doctor",
-      link: { services },
-    },
-    {
-      title: "Testimonials",
-      link: { services },
-    },
-    {
-      title: "COntact Us",
-      link: { services },
-    },
-  ];
+  
   const hoursArr = [
     "Monday - Wednesday: 9:30AM - 6:00PM",
     "Thursday: 10:00AM - 7:00PM",
@@ -27,25 +9,9 @@ function Footer() {
     "Sunday: Closed",
   ];
   return (
-    <footer className="background-Nav-Footer w-full pb-10 mt-5">
+    <footer className="bg-slate-200  w-full pb-10 mt-5">
       <div className="mx-auto w-full container">
-        <div className="flex py-10 flex-wrap grid grid-cols-3 grid-flow-col">
-          <div>
-            <h2 className="text-center mb-6 text-sm font-semibold uppercase">
-              Company
-            </h2>
-            <ul className="text-center">
-              {companyArr.map((company_i) => {
-                return (
-                  <li className="-ml-8 mb-4">
-                    <a href={company_i.link} className="no-underline text-color">
-                      <p className="hover:text-sky-700">{company_i.title}</p>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        <div className="flex py-10 flex-wrap grid grid-cols-2 grid-flow-col">
           <div>
             <h2 className="mb-6 text-center text-sm font-semibold uppercase">
               Hours

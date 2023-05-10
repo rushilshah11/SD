@@ -14,7 +14,7 @@ function Footer() {
     "Sunday: Closed",
   ];
   return (
-    <footer className="footerText w-full pb-10 mt-5">
+    <footer className="footerText w-full pb-10">
       <div className="mx-auto w-full container">
         <div className="flex py-10 flex-wrap grid grid-cols-2 grid-flow-col">
           <div>

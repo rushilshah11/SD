@@ -10,7 +10,8 @@ function Footer() {
   const hoursArr = [
     "Monday - Wednesday: 9:30AM - 6:00PM",
     "Thursday: 10:00AM - 7:00PM",
-    "Friday - Saturday: By Appointment Only",
+    "Friday: 10:00AM - 1:00PM",
+    "Saturday: By Appointment Only",
     "Sunday: Closed",
   ];
   return (

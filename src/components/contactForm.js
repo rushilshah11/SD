@@ -1,8 +1,44 @@
 import "../App.css";
+import {useState} from 'react';
+import { db } from "../index";
 
 function ContactForm() {
+  const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const [name, setName] = useState("");
+  
+  const [email, setEmail] = useState("");
+  
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    db.collection("contactForm")
+      .add({
+        name: name,
+        
+        email: email,
+        
+        message: message,
+      })
+      .then(() => {
+        alert("Appointment has been booked!");
+        setShow(false);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    setName(" ");
+    setEmail(" ");
+    setMessage(" ");
+  };
+
   return (
-    <div className="">
+    <div show={show} >
       <div className="flex w-ful min-h-screenitems-center">
         <div className="bgContactUs flex flex-row md:space-x-6  space-y-6 md:space-y-0 w-full max-4-4xl p-8 rounded-xl shadow-lg text-white">
           <div className="flex flex-col space-y-8 justify-between">
@@ -37,6 +73,8 @@ function ContactForm() {
                   <input
                     for=""
                     placeholder="Your name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
                 </div>
@@ -47,20 +85,27 @@ function ContactForm() {
                   <input
                     type="email"
                     placeholder="Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
+                </div>
+                <div>
                   <label for="" className="mt-2 text-sm">
                     Message
                   </label>
-                </div>
-                <div>
                   <textarea
                     placeholder="Message"
                     rows="4"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   ></textarea>
                 </div>
-                <button className="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm mt-3">
+                <button
+                  onClick={handleSubmit}
+                  className="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm mt-3"
+                >
                   Send Message
                 </button>
               </form>

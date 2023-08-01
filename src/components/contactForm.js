@@ -3,10 +3,6 @@ import {useState} from 'react';
 import { db } from "../index";
 
 function ContactForm() {
-  const [show, setShow] = useState(false);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   const [name, setName] = useState("");
   
@@ -25,8 +21,7 @@ function ContactForm() {
         message: message,
       })
       .then(() => {
-        alert("Appointment has been booked!");
-        setShow(false);
+        alert("Form Submitted");
       })
       .catch((error) => {
         alert(error.message);
@@ -38,7 +33,7 @@ function ContactForm() {
   };
 
   return (
-    <div show={show} >
+    <div>
       <div className="flex w-ful min-h-screenitems-center">
         <div className="bgContactUs flex flex-row md:space-x-6  space-y-6 md:space-y-0 w-full max-4-4xl p-8 rounded-xl shadow-lg text-white">
           <div className="flex flex-col space-y-8 justify-between">

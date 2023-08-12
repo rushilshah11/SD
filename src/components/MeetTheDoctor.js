@@ -20,7 +20,7 @@ function MeetTheDoctor() {
             procedure beforehand.
           </p>
         </Col>
-        <Col>
+        <Col className="picHiddenOnMobile">
           <img src={doctorPic}></img>
         </Col>
       </Row>

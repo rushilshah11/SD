@@ -23,7 +23,7 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div className="contactForm">
       <div className="flex w-ful min-h-screenitems-center">
         <div className="bgContactUs flex flex-row md:space-x-6  space-y-6 md:space-y-0 w-full max-4-4xl p-8 rounded-xl shadow-lg text-white">
           <div className="flex flex-col space-y-8 justify-between">

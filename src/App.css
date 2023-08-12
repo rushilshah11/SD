@@ -38,3 +38,13 @@ p{
     font-size: 16px;
 	color: #666666;
 }
+
+@media only screen and (max-width: 480px) {
+	.contactForm{
+		margin-bottom: 20px;
+	}
+
+	.picHiddenOnMobile{
+		display: none;
+	}
+}

@@ -1,35 +1,25 @@
 import "../App.css";
 import {useState} from 'react';
-import { db } from "../index";
 
 function ContactForm() {
+  const [formState, setFormState] = useState({});
 
-  const [name, setName] = useState("");
-  
-  const [email, setEmail] = useState("");
-  
-  const [message, setMessage] = useState("");
+  const changeHandler = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    db.collection("contactForm")
-      .add({
-        name: name,
-        
-        email: email,
-        
-        message: message,
-      })
-      .then(() => {
-        alert("Form Submitted");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-
-    setName(" ");
-    setEmail(" ");
-    setMessage(" ");
+    const config = {
+      SecureToken: "13d5dbc3-91a9-40d6-be5f-19d536b7d169",
+      To: "rushilshah.282@gmail.com",
+      From: formState.email,
+      Subject: "This is from the contact form",
+      Body: `${formState.name} connected to you over email. This is his message: ${formState.message}`,
+    };
+    if(window.Email){
+      window.Email.send(config).then(() => alert("Form submitted successfully"));
+    }
   };
 
   return (
@@ -48,19 +38,25 @@ function ContactForm() {
             </div>
             <div className="flex flex-col space-y-6 text-cyan-100 text-sm">
               <div className="inline-flex space-x-2 items-center">
-                <span>Phone: 7144044595</span>
+                <span>Phone: 714-533-9670</span>
               </div>
               <div className="inline-flex space-x-2 items-center">
                 <span>Email: sunkistdental@yahoo.com</span>
               </div>
               <div className="inline-flex space-x-2 items-center">
-                <span>Location: 2710 N Coventry St, Orange, CA 92867</span>
+                <span>
+                  Location: 1234 W Chapman Ave suite 106, Orange, CA 92868
+                </span>
               </div>
             </div>
           </div>
           <div>
             <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-100">
-              <form action="" className="flex flex-col spacy-y-4">
+              <form
+                action=""
+                className="flex flex-col spacy-y-4"
+                onSubmit={handleSubmit}
+              >
                 <div>
                   <label for="" className="mt-2 text-sm">
                     Your Name
@@ -68,8 +64,9 @@ function ContactForm() {
                   <input
                     for=""
                     placeholder="Your name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    name="name"
+                    value={formState.name || ""}
+                    onChange={changeHandler}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
                 </div>
@@ -80,8 +77,9 @@ function ContactForm() {
                   <input
                     type="email"
                     placeholder="Email Address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    name="email"
+                    value={formState.email || ""}
+                    onChange={changeHandler}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
                 </div>
@@ -92,17 +90,17 @@ function ContactForm() {
                   <textarea
                     placeholder="Message"
                     rows="4"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    name="message"
+                    onChange={changeHandler}
+                    value={formState.message || ""}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   ></textarea>
                 </div>
-                <button
-                  onClick={handleSubmit}
+                <input
+                  type="submit"
+                  value="Send Form"
                   className="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm mt-3"
-                >
-                  Send Message
-                </button>
+                />
               </form>
             </div>
           </div>

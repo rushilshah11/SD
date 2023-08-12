@@ -10,9 +10,14 @@ h4 {
 	letter-spacing: 1px;
 	text-transform: capitalize;
 }
+
 p{
 	font-size: 16px;
 	color: #666666;
+}
+
+.footerLinkColor {
+	color: #266880;
 }
 
 .navbartext{

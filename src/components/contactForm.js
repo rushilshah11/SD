@@ -1,26 +1,34 @@
 import "../App.css";
-import {useState} from 'react';
+import emailjs from "emailjs-com";
 
 function ContactForm() {
-  const [formState, setFormState] = useState({});
+  const SERVICE_ID = "service_uddtb38";
+  const TEMPLATE_ID = "template_sl4ijgn";
+  const PUBLIC_KEY = "ILoc8O2Z4yoEFabTd";
 
-  const changeHandler = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const config = {
-      SecureToken: "13d5dbc3-91a9-40d6-be5f-19d536b7d169",
-      To: "rushilshah.282@gmail.com",
-      From: formState.email,
-      Subject: "This is from the contact form",
-      Body: `${formState.name} connected to you over email. This is his message: ${formState.message}`,
-    };
-    if(window.Email){
-      window.Email.send(config).then(() => alert("Form submitted successfully"));
-    }
+
+    alert("Your form has been sent!");
+
+    emailjs
+      .sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        e.target,
+        PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
+  
 
   return (
     <div className="contactForm">
@@ -55,52 +63,45 @@ function ContactForm() {
               <form
                 action=""
                 className="flex flex-col spacy-y-4"
-                onSubmit={handleSubmit}
+                onSubmit={sendEmail}
               >
                 <div>
-                  <label for="" className="mt-2 text-sm">
+                  <label for="name" className="mt-2 text-sm">
                     Your Name
                   </label>
                   <input
-                    for=""
-                    placeholder="Your name"
+                    placeholder="Name"
                     name="name"
-                    value={formState.name || ""}
-                    onChange={changeHandler}
+                    type="text"
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
                 </div>
                 <div>
-                  <label for="" className="mt-2 text-sm">
+                  <label for="name" className="mt-2 text-sm">
                     Email Address
                   </label>
                   <input
+                    placeholder="Email"
                     type="email"
-                    placeholder="Email Address"
                     name="email"
-                    value={formState.email || ""}
-                    onChange={changeHandler}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   />
                 </div>
                 <div>
-                  <label for="" className="mt-2 text-sm">
+                  <label for="name" className="mt-2 text-sm">
                     Message
                   </label>
                   <textarea
                     placeholder="Message"
                     rows="4"
                     name="message"
-                    onChange={changeHandler}
-                    value={formState.message || ""}
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-200"
                   ></textarea>
                 </div>
-                <input
+                <button
                   type="submit"
-                  value="Send Form"
                   className="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm mt-3"
-                />
+                >Send Form</button>
               </form>
             </div>
           </div>

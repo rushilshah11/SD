@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import emailjs from "emailjs-com";
 import "./services.css";
 import { db } from "../index";
 
 function ModalTest(props) {
+  const SERVICE_ID = "service_uddtb38";
+  const TEMPLATE_ID = "template_kguyquf";
+  const PUBLIC_KEY = "ILoc8O2Z4yoEFabTd";
+  // for firebase
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  
   
 
   const [firstName, setFirstName] = useState("");
@@ -22,6 +29,14 @@ function ModalTest(props) {
   const handleSubmit = (e) => {
     
     e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
     db.collection("bookAppointment")
       .add({
         firstName: firstName,
@@ -47,6 +62,7 @@ function ModalTest(props) {
       setDate(' ');
       setTime(' ');
       setReason(' ');
+
   };
 
 
@@ -62,7 +78,7 @@ function ModalTest(props) {
           <Modal.Title>Book Appointment</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <div className="flex flex-wrap justify-center grid grid-cols-2 grid-flow-row">
               <Form.Group
                 className="mb-3 m-2"
@@ -71,6 +87,7 @@ function ModalTest(props) {
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="firstName"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
@@ -82,6 +99,7 @@ function ModalTest(props) {
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="lastName"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
@@ -95,6 +113,7 @@ function ModalTest(props) {
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type="subject"
+                name="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -107,6 +126,7 @@ function ModalTest(props) {
               <Form.Control
                 type="email"
                 value={email}
+                name="email"
                 placeholder="name@example.com"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -125,6 +145,7 @@ function ModalTest(props) {
                 <Form.Control
                   type="date"
                   value={date}
+                  name="date"
                   onChange={(e) => setDate(e.target.value)}
                 />
               </Form.Group>
@@ -141,6 +162,7 @@ function ModalTest(props) {
                 <Form.Control
                   type="time"
                   value={time}
+                  name="time"
                   onChange={(e) => setTime(e.target.value)}
                 />
               </Form.Group>
@@ -154,16 +176,15 @@ function ModalTest(props) {
                 as="textarea"
                 rows={3}
                 value={reason}
+                name="reason"
                 onChange={(e) => setReason(e.target.value)}
               />
             </Form.Group>
+            <button className="flex justify-center items-center button-81">
+              Submit
+            </button>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <button className="button-81" onClick={handleSubmit}>
-            Submit
-          </button>
-        </Modal.Footer>
       </Modal>
     </>
   );

@@ -19,7 +19,7 @@ function MeetTheDoctor() {
           </p>
         </Col>
         <Col className="picHiddenOnMobile">
-          <img src={doctorPic}></img>
+          <img src={doctorPic} alt="cute pic of doctor"></img>
         </Col>
       </Row>
       <Row>

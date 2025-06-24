@@ -8,9 +8,11 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 function Footer() {
   
   const hoursArr = [
-    "Monday - Wednesday: 9:30AM - 6:00PM",
-    "Thursday: 10:00AM - 7:00PM",
-    "Friday: 10:00AM - 1:00PM",
+    "Monday: 10:00AM - 6:00PM",
+    "Tuesday: Closed",
+    "Wednesday: 10:00AM - 6:00PM",
+    "Thursday: Closed",
+    "Friday: 10:00AM - 6:00PM",
     "Saturday: By Appointment Only",
     "Sunday: Closed",
   ];

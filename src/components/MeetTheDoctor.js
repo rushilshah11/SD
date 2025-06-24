@@ -8,9 +8,7 @@ function MeetTheDoctor() {
     <Container>
       <Row>
         <Col>
-          <h4>
-            MEET DR. SHAH
-          </h4>
+          <h4>MEET DR. SHAH</h4>
           <p>
             Dr. Shah is passionate about providing her patients the best service
             possible. Dr. Shah’s impeccable eye for detail, dedication to
@@ -29,9 +27,9 @@ function MeetTheDoctor() {
           She also makes a point to establish a connection with her patients by
           getting to know them, so she can often be found laughing alongside
           them. As such, for years, she has treated generations of happy
-          families, who told her to the highest regard. When not at work, she
-          spends time with her two children, watches shark tank, or
-          plays the piano
+          families, who hold her to the highest regard. When not at work, she
+          spends time with her two children, watches shark tank, or plays the
+          piano.
         </p>
       </Row>
     </Container>

@@ -20,15 +20,49 @@ function Testimonials() {
     },
     {
       name: "Daniel P",
-      description: "“She is an excellent dentist. She’s honest and upfront about cost and tells you only what is necessary for your care. I’ve been going to get for years, and would recommend her to many people I know.”",
+      description:
+        "“She is an excellent dentist. She’s honest and upfront about cost and tells you only what is necessary for your care. I’ve been going to get for years, and would recommend her to many people I know.”",
     },
   ];
 
- 
+  const testimonials2 = [
+    {
+      name: "Asheel P.",
+      description:
+        "“I can't thank this dental practice enough for their prompt and professional response. The entire staff was calm, efficient, and incredibly reassuring during a stressful situation.”",
+    },
+    {
+      name: "Shivam V.",
+      description:
+        "“Dr. Shah was honestly really helpful. She was really nice and explained what was going on thoroughly. Would definitely recommend to anyone.”",
+    },
+    {
+      name: "Nairobi H.",
+      description:
+        "“Love that this dental office is down the street from my house but especially love their staff. Rosa is so sweet and always helpful.”",
+    },
+  ];
+
+  const testimonials3 = [
+    {
+      name: "Julian R.",
+      description:
+        "“I hadn't been to the dentist in years, so frankly I was pretty nervous. The team made me feel really welcome and throughout the cleaning process they checked in on me to make sure I was good. Very clean place.”",
+    },
+    {
+      name: "Bev P.",
+      description:
+        "“This dentist and staff are great. Conservative, compassionate and professional. Each procedure is thoroughly explained and there is no pressure for unnecessary procedures.”",
+    },
+    {
+      name: "Liz D.",
+      description:
+        "“Dr. Shah is great! She is patient and listens to her clients to make sure they feel comfortable. The setting in the office is a small family practice.”",
+    },
+  ];
 
   return (
     <Container>
-     
       <Row>
         <Col>
           <Carousel
@@ -71,7 +105,7 @@ function Testimonials() {
             className="hvr-float car-pos col-sm"
             indicators={false}
           >
-            {testimonials.map((testimonial) => {
+            {testimonials2.map((testimonial) => {
               return (
                 <Carousel.Item pause="hover" controls="false" interval={2000}>
                   <div className="container d-flex justify-content-center">
@@ -104,7 +138,7 @@ function Testimonials() {
             className="hvr-float car-pos col-sm"
             indicators={false}
           >
-            {testimonials.map((testimonial) => {
+            {testimonials3.map((testimonial) => {
               return (
                 <Carousel.Item pause="hover" controls="false" interval={2000}>
                   <div className="container d-flex justify-content-center">
